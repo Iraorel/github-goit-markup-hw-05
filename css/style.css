@@ -242,7 +242,7 @@ align-items: center;
   background-color: rgba(107, 78, 78, 0.1);
 }
 
-.backdrop .is-hidden {
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
@@ -257,7 +257,14 @@ align-items: center;
 
   background-color: var(--dark-bg-text-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px, 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2) ;
+ border-radius: 4px;
  
+}
+
+.icon-advantages-butten{
+width: 11px;
+height: 11px;
 }
 .page-title {
   font-weight: 900;

@@ -46,8 +46,13 @@
         <div class="conteiner"> 
         <section class="dark-bg">
            <h1 class="page-title ">Эффективные решения для вашего бизнеса</h1>
-           <button type="button" class="button">Заказать услугу</button>
-     
+           <button type="button" class="button" data-modal-open >Заказать услугу</button>
+      
+      <div class="backdrop is-hidden" data-modal >
+       <div class="modal"  >
+       <button data-modal-close >  <svg class="icon-advantages-butten "><use href="./images/sprite.svg.svg#icon-Vector2" ></svg> </use> </button>
+       </div>
+      </div>
          </section> 
       </div>  
       </div>
@@ -368,11 +373,8 @@
       </ul>
    </div>
 </div>
-
-   </div>
-     </footer>
-     <div class="backdrop">
-      <div class="modal"></div>
-   </div>
+</div>
+</footer>
+<script src="./js/modal.js"></script>
    </body>
    </html>
