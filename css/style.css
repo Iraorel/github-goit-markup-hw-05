@@ -8,6 +8,8 @@
   --icon-color: #afb1b8;
   --dark: #000000;
   --grid-item: 1;
+
+  --animation: 250ms ;
 }
 
 html {
@@ -53,12 +55,29 @@ p {
   text-decoration: none;
 
   color: inherit;
+
+  transition: color var(--animation);
 }
 .link:hover,
 .link:focus {
   color: var(--accent-color);
 }
 
+.menu-link{
+  position: relative;
+
+}
+
+.menu-link:after{
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+}
 .list {
   margin-top: 0;
   margin-bottom: 0;
@@ -86,7 +105,7 @@ p {
 
 
 .grid-item {
- 
+ position: relative;
   flex-basis: calc(100%-30px * var(--grid-item) / var(--grid-item));
   margin-left: 30px;
   margin-top: 30px;
@@ -95,10 +114,12 @@ p {
 }
 
 .grid-text{
-
- 
-  display: flex;
- 
+position: absolute;
+top: 224px;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ padding-top: 27px;
 
   font-weight: bold;
   font-size: 14px;
@@ -106,10 +127,13 @@ p {
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: red;
+  color: var(--dark-bg-text-color);
+background: rgba(47, 48, 58, 0.8);
 
  
 }
+
+
 
 /*icon*/
 .social-icons-item {
@@ -183,6 +207,8 @@ p {
   margin-right: 20px;
   stroke: var(--main-text-color);
 
+  transition: fill var(--animation);
+
  
 }
 
@@ -252,6 +278,8 @@ align-items: center;
   cursor: pointer;
   border: none;
   padding: 10px 32px;
+
+  transition:  color var(--animation) , backgraund-color var(--animation);
 }
 
 
@@ -266,6 +294,7 @@ align-items: center;
 
 .backdrop.is-hidden {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 .modal {
@@ -478,6 +507,8 @@ height: 11px;
 
 .icon-clients-link {
   fill: var(--icon-color);
+
+  transition: var(--animation);
 }
 
 .icon-clients-link:hover .icon,
@@ -555,6 +586,7 @@ img {
 
 .card:hover .card-content{
   opacity: 1;
+
 }
 .card-thumb {
   width: 370px;
@@ -562,6 +594,7 @@ img {
 
 .card-thumb:hover::before{
   opacity: 1;
+ 
 }
 .card-thumb{
   position: relative;
@@ -576,6 +609,7 @@ img {
   background: rgba(33, 150, 243, 0.9) ;
 
   opacity: 0;
+
 }
 
 .card-content {
@@ -618,4 +652,6 @@ img {
 .social-icons-link-join:hover .icon,
 .social-icons-link-join:focus .icon {
   fill: var(--accent-color);
+
+  transition: var(--animation);
 }
