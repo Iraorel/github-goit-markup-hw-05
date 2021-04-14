@@ -613,11 +613,12 @@ img {
 .card-thumb::before{
   
   content: "";
-  display: inline-block;
+  display: flex;
   position: absolute;
   width: 100%;
   height: 100%;
-  bottom:-310px;
+  bottom:;
+
   background: rgba(33, 150, 243, 0.9) ;
 
   opacity: 0;
@@ -626,14 +627,18 @@ img {
 }
 .link:hover .card-thumb::before{
   
-  transform: translateY(310px) cubic-bezier(0.4, 0, 0.2, 1) ;
+  transform: translateY ( 310px ) cubic-bezier(0.4, 0, 0.2, 1) ;
 }
+/*
+.text-portfolio::before{
 
-.overley{
+  content: "";
+  margin: 63px , 24px;
+}
+.text-portfolio{
   display: flex;
   width: 370px;
-  height: 100%;
-  
+  height: 100%;  
   font-weight: normal;
   font-size: 18px;  
   line-height: 1.56;
